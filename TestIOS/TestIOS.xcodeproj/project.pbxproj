@@ -28,7 +28,6 @@
 		8B648B8729CC821D002200A2 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B8629CC821D002200A2 /* String.swift */; };
 		8B648B8929CC849F002200A2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B8829CC849F002200A2 /* UserService.swift */; };
 		8B648B8B29CC9006002200A2 /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B8A29CC9006002200A2 /* DetailService.swift */; };
-		8B648B8D29CC9CBF002200A2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B8C29CC9CBF002200A2 /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +72,6 @@
 		8B648B8629CC821D002200A2 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8B648B8829CC849F002200A2 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		8B648B8A29CC9006002200A2 /* DetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailService.swift; sourceTree = "<group>"; };
-		8B648B8C29CC9CBF002200A2 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				8B648B7529CC784C002200A2 /* NetworkRequestExecutor.swift */,
-				8B648B8C29CC9CBF002200A2 /* Token.swift */,
 			);
 			path = Executor;
 			sourceTree = "<group>";
@@ -389,7 +386,6 @@
 				8B648B8729CC821D002200A2 /* String.swift in Sources */,
 				8B648B7B29CC7A9A002200A2 /* Payload.swift in Sources */,
 				8B648B8929CC849F002200A2 /* UserService.swift in Sources */,
-				8B648B8D29CC9CBF002200A2 /* Token.swift in Sources */,
 				8B648B7029CC75B4002200A2 /* UserView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,4 +20,18 @@ final class DetailServiceImpl: DetailService {
     init(executor: NetworkRequestExecutor) {
         self.executor = executor
     }
+    
+    func fetchUserDetails(for id: String) -> AnyPublisher<UserDetailsResponse, Error> {
+        guard let url = URL(string: "https://opn-interview-service.nn.r.appspot.com/get/\(id)") else {
+            fatalError("Cannot create url")
+        }
+        
+        let request = executor.createRequest(for: url)
+        
+        return URLSession.shared.dataTaskPublisher(for: request)
+            .map { $0.data }
+            .decode(type: UserDetailsResponse.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
 }

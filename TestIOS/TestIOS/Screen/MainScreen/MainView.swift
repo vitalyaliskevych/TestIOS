@@ -12,7 +12,7 @@ struct MainView: View {
     @ObservedObject  var viewModel = MainViewModel()
     
     var usersList: some View {
-        Group <#_#>{
+        ZStack{
             if viewModel.fetchedData {
                 List(viewModel.details) { details in
                     NavigationLink {
@@ -23,7 +23,7 @@ struct MainView: View {
                 }
                 .listStyle(GroupedListStyle())
                 .refreshable {
-                    viewModel.getUserID()
+                    viewModel.getUserID
                 }
             } else {
                 if viewModel.errorMessage.isEmpty {
