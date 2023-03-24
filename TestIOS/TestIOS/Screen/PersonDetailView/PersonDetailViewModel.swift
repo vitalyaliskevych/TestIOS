@@ -9,10 +9,11 @@ import Foundation
 import Combine
 
 class PersonDetailViewModel: ObservableObject {
+    
     private let networkRequestExecutor: NetworkRequestExecutor
     
-    @Published var person: Person?
-    @Published var error: NetworkError?
+    @Published var userDetails: UserDetails?
+    @Published var error = false
     private var cancellable: AnyCancellable?
     
     init(networkRequestExecutor: NetworkRequestExecutor) {
@@ -25,16 +26,16 @@ class PersonDetailViewModel: ObservableObject {
         
         cancellable = URLSession.shared.dataTaskPublisher(for: request)
             .map { $0.data }
-            .decode(type: Person.self, decoder: JSONDecoder())
+            .decode(type: userDetails.self, decoder: JSONDecoder())
             .sink(receiveCompletion: { [weak self] completion in
                 switch completion {
                 case .finished:
                     break
                 case .failure(let error):
-                    self?.error = .decodingError(error)
+                    self?.error = error.encode(to: JSONEncoder())
                 }
-            }, receiveValue: { [weak self] person in
-                self?.person = person
+            }, receiveValue: { [weak self] userDetails in
+                self?.userDetails = userDetails
             })
     }
 }

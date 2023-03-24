@@ -11,7 +11,10 @@ import SwiftUI
 struct TestIOSApp: App {
     var body: some Scene {
         WindowGroup {
-           MainView()
+           PersonListView(viewModel: PersonListViewModel(
+            networkRequestExecutor: NetworkRequestExecutor()
+           )
+           )
         }
     }
 }

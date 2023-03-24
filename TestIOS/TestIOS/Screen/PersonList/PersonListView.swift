@@ -13,9 +13,9 @@ struct PersonListView: View {
 
     var body: some View {
         NavigationView {
-            List(viewModel.people) { person in
-                NavigationLink(destination: PersonDetailView(person: person)) {
-                    Text(person.firstName)
+            List(viewModel.userDetails) { userDetails in
+                NavigationLink(destination: PersonDetailView(userDetails: userDetails)) {
+                    Text(userDetails)
                 }
             }
             .navigationTitle("People")

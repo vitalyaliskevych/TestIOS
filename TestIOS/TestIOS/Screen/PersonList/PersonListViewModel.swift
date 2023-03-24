@@ -11,8 +11,9 @@ import Network
 
 class PersonListViewModel: ObservableObject {
     private let networkRequestExecutor: NetworkRequestExecutor
-    @Published var people: [Person] = []
-    @Published var error: NetworkError?
+    
+    @Published var userDetails = [UserDetails]()
+    @Published var error = false
     private var cancellable: AnyCancellable?
     
     init(networkRequestExecutor: NetworkRequestExecutor) {
@@ -25,16 +26,16 @@ class PersonListViewModel: ObservableObject {
         
         cancellable = URLSession.shared.dataTaskPublisher(for: request)
             .map { $0.data }
-            .decode(type: [Person].self, decoder: JSONDecoder())
+            .decode(type: userDetails.self, decoder: JSONDecoder())
             .sink(receiveCompletion: { [weak self] completion in
                 switch completion {
                 case .finished:
                     break
                 case .failure(let error):
-                    self?.error = .decodingError(error)
+                    self?.error = error
                 }
-            }, receiveValue: { [weak self] people in
-                self?.people = people
+            }, receiveValue: { [weak self] error in
+                self?.error = error
             })
     }
 }
