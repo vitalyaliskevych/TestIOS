@@ -9,15 +9,15 @@ import SwiftUI
 
 struct PersonDetailView: View {
     
-    let person: Person
+    let userDetails: UserDetails
     
     var body: some View {
         VStack {
-            Text(person.firstName)
-            Text(person.lastName)
-            Text("\(person.age)")
-            Text(person.gender.rawValue)
-            Text(person.country)
+            Text(userDetails.firstName)
+            Text(userDetails.lastName)
+            Text("\(userDetails.age)")
+            Text(userDetails.gender)
+            Text(userDetails.country)
         }
     }
 }
