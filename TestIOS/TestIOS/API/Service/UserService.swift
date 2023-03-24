@@ -9,32 +9,58 @@ import Foundation
 import Combine
 import CryptoKit
 
-protocol UserDefaultService {
+class UserService {
     
-    func getUsers() -> AnyPublisher<UsersList, Error>
-}
-
-final class UsersService {
+    let networkRequestExecutor = NetworkRequestExecutor()
+    private var cancellable: Set<AnyCancellable> = []
     
-    private var token: String = ""
-    let executor: NetworkRequestExecutor
-    
-    init(token: String, executor: NetworkRequestExecutor) {
-        self.token = token
-        self.executor = executor
-    }
-
-    func getUsers() -> AnyPublisher<UsersList, Error> {
-        guard let url = URL(string: "https://opn-interview-service.nn.r.appspot.com/list") else {
-            fatalError("Cannot create url")
+        func fetchPeople() -> AnyPublisher<[UserDetails], Error> {
+            let url = URL(string: "http://opn-interview-service.nn.r.appspot.com/list")!
+            let request = networkRequestExecutor.createRequest(for: url)
+            return URLSession.shared.dataTaskPublisher(for: request)
+                    .map { $0.data }
+                    .decode(type: UsersList.self, decoder: JSONDecoder())
+                    .map {fetchUserDetails(userIds: $0.userIDs)}
+                    .eraseToAnyPublisher()
         }
+    
+    private func fetchUserDetails(userIds: [String]) -> AnyPublisher <[UserDetails], Error> {
+        let group = DispatchGroup()
         
-        let request = executor.createRequest(for: url)
+        var arr = [UserDetails]()
+        var lastError: Error?
+        let result: Result<[UserDetails], Error>
+        
+        for id in userIds {
+            group.enter()
+            cancellable.insert(
+                fetchPersonDetails(withId: id).sink { completion in
+                    if case let .failure(error) = completion {
+                        lastError = error
+                    }
+                    group.leave()
+                } receiveValue: { userDetails in
+                    arr.append(userDetails)
+                }
+            )
+        }
+        group.wait()
+        if let lastError {
+            result = .failure(lastError)
+        } else {
+            result = .success(arr)
+        }
+        return result.publisher.eraseToAnyPublisher()
+    }
+    
+    private func fetchPersonDetails(withId id: String) -> AnyPublisher <UserDetails, Error> {
+        let url = URL(string: "http://opn-interview-service.nn.r.appspot.com/get/\(id)")!
+        let request = networkRequestExecutor.createRequest(for: url)
         
         return URLSession.shared.dataTaskPublisher(for: request)
             .map { $0.data }
-            .decode(type: UsersList.self, decoder: JSONDecoder())
-            .receive(on: DispatchQueue.main)
+            .decode(type: UserDetailsResponse.self, decoder: JSONDecoder())
+            .map { $0.data }
             .eraseToAnyPublisher()
     }
 }

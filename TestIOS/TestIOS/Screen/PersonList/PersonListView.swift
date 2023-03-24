@@ -15,10 +15,19 @@ struct PersonListView: View {
         NavigationView {
             List(viewModel.userDetails) { userDetails in
                 NavigationLink(destination: PersonDetailView(userDetails: userDetails)) {
-                    Text(userDetails)
+                    Text(userDetails.firstName)
                 }
             }
             .navigationTitle("People")
+//        }.alert(isPresented: $viewModel.isAlerting, error: viewModel.error) {
+//            Button {
+//                {}
+//            } label: {
+//                Text("Ok")
+//            }
+//
+        }.onAppear {
+            viewModel.fetchPeople()
         }
     }
 }

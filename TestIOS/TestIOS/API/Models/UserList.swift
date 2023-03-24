@@ -8,9 +8,9 @@
 import Foundation
 
 struct UsersList: Codable {
-    let userID: [String]
+    let userIDs: [String]
     
     enum CodingKeys: String, CodingKey {
-        case userID = "data"
+        case userIDs = "data"
     }
 }
