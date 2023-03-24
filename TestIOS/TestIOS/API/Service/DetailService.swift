@@ -11,6 +11,7 @@ import Combine
 
 protocol DetailService {
     
+    func getDetails(for id: String) -> AnyPublisher<UserDetailsResponse, Error>
 }
 
 final class DetailServiceImpl: DetailService {
@@ -21,7 +22,7 @@ final class DetailServiceImpl: DetailService {
         self.executor = executor
     }
     
-    func fetchUserDetails(for id: String) -> AnyPublisher<UserDetailsResponse, Error> {
+    func getDetails(for id: String) -> AnyPublisher<UserDetailsResponse, Error> {
         guard let url = URL(string: "https://opn-interview-service.nn.r.appspot.com/get/\(id)") else {
             fatalError("Cannot create url")
         }

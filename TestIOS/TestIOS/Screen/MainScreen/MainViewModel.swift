@@ -17,28 +17,30 @@ class MainViewModel: ObservableObject {
 
     @Published var id: [String] = []
     @Published var details = [UserDetails]()
+    
+    var cancellables: Set<AnyCancellable?> = []
 }
 
 final class MainViewModelImpl: MainViewModel {
     
     private let userService: UserDefaultService
-    private var cancellables = Set<AnyCancellable>()
+    private let detailService: DetailService
     
-    init(userService: UserDefaultService, cancellables: Set<AnyCancellable> = Set<AnyCancellable>()) {
+    init(userService: UserDefaultService, detailService: DetailService, cancellables: Set<AnyCancellable?> = []) {
         self.userService = userService
-        self.cancellables = cancellables
+        self.detailService = detailService
     }
     
     func getUserID() {
-        cancellables = usersService.getUsers()
+        cancellables = userService.getUsers()
             .mapError({ [weak self] (error) -> Error in
                 self?.error = error.localizedDescription
                 self?.isShowing = true
                 return error
             })
             .sink(receiveCompletion: { _ in }, receiveValue: { [weak self] users in
-                self?.ids = users.userIDs.filter { UUID(uuidString: $0) != nil }
-                self?.fetchUserDetails()
+                self?.id = users.userID.filter { UUID(uuidString: $0) != nil }
+                self?.getUserDetails()
             })
     }
     
@@ -47,12 +49,12 @@ final class MainViewModelImpl: MainViewModel {
 
         for id in id {
             group.enter()
-            cancellables.insert(usersService.getUserDetails(for: id)
+            cancellables.insert(detailService.getDetails(for: id)
                                     .sink(receiveCompletion: { _ in
                 group.leave()
-            }, receiveValue: { [weak self] userDetails in
-                if let self = self, !self.details.contains(where: { $0 == userDetails.data }) {
-                    self.details.append(userDetails.data)
+            }, receiveValue: { [weak self] detailService in
+                if let self = self, !self.detailService.contains(where: { $0 == detailService.data }) {
+                    self.detailService.append(detailService.data)
                 }
             }))
         }
