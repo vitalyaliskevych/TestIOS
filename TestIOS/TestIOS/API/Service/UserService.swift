@@ -20,7 +20,7 @@ class UserService {
             return URLSession.shared.dataTaskPublisher(for: request)
                     .map { $0.data }
                     .decode(type: UsersList.self, decoder: JSONDecoder())
-                    .map {fetchUserDetails(userIds: $0.userIDs)}
+                    .flatMap {self.fetchUserDetails(userIds: $0.userIDs)}
                     .eraseToAnyPublisher()
         }
     

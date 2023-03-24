@@ -10,22 +10,18 @@ import SwiftUI
 struct PersonListView: View {
     
     @ObservedObject var viewModel: PersonListViewModel
-
+    
     var body: some View {
         NavigationView {
-            List(viewModel.userDetails) { userDetails in
-                NavigationLink(destination: PersonDetailView(userDetails: userDetails)) {
-                    Text(userDetails.firstName)
-                }
+            if viewModel.isAlerting {
+                Text(viewModel.error!.localizedDescription)
+            } else {
+                List(viewModel.userDetails) { userDetails in
+                    NavigationLink(destination: PersonDetailView(userDetails: userDetails)) {
+                        Text(userDetails.firstName)
+                    }
+                }.navigationTitle("People")
             }
-            .navigationTitle("People")
-//        }.alert(isPresented: $viewModel.isAlerting, error: viewModel.error) {
-//            Button {
-//                {}
-//            } label: {
-//                Text("Ok")
-//            }
-//
         }.onAppear {
             viewModel.fetchPeople()
         }
