@@ -15,8 +15,10 @@ class UserService {
     private var cancellable: Set<AnyCancellable> = []
     
     func fetchPeople() -> AnyPublisher<UsersList, Error> {
+        
         let url = URL(string: "http://opn-interview-service.nn.r.appspot.com/list")!
         let request = networkRequestExecutor.createRequest(for: url)
+        
         return URLSession.shared.dataTaskPublisher(for: request)
             .map { $0.data }
             .decode(type: UsersList.self, decoder: JSONDecoder())

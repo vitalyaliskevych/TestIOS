@@ -23,6 +23,17 @@ class PersonListViewModel: ObservableObject {
         self.userService = userService
     }
     
+    enum Result {
+            case navigationDetail(user: UserDetails)
+            case navigationBack
+        }
+        
+        var onResult:((Result) -> Void)?
+        
+        func navigationDetail(user: UserDetails) {
+            onResult?(.navigationDetail(user: user))
+        }
+    
     func fetchPeople() {
         let group = DispatchGroup()
         

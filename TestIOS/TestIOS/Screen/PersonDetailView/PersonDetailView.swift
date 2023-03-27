@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PersonDetailView: View {
     
+    @ObservedObject var viewModel: PersonDetailViewModel
     let userDetails: UserDetails
     
     var body: some View {
@@ -20,6 +21,12 @@ struct PersonDetailView: View {
                 Text(userDetails.gender)
                 Text(userDetails.country)
                 Spacer()
+                Button {
+                    viewModel.navigationBackTO()
+                } label: {
+                Text("Back")
+                }
+
             }
             .foregroundColor(.red)
             .font(.system(size: 25))

@@ -19,6 +19,22 @@ class PersonDetailViewModel: ObservableObject {
     init(networkRequestExecutor: NetworkRequestExecutor) {
         self.networkRequestExecutor = networkRequestExecutor
     }
+    
+    enum Result {
+         case navigationBackToList
+         case navigationBack
+     }
+
+     var onResult: ((Result) -> Void)?
+     
+     func navigationBack() {
+         onResult?(.navigationBackToList)
+     }
+     
+     func navigationBackTO() {
+         onResult?(.navigationBackToList)
+     }
+     
 }
 
 

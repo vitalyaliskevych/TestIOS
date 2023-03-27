@@ -16,9 +16,12 @@ struct PersonListView: View {
             if viewModel.isError {
                 List {
                     ForEach(viewModel.userDetails, id: \.self) { userDetails in
-                        NavigationLink(destination: PersonDetailView(userDetails: userDetails)) {
+                        Button {
+                            viewModel.navigationDetail(user: userDetails)
+                        } label: {
                             Text(userDetails.firstName)
                         }
+
                     }.navigationTitle("People")
                 }
             } else {
@@ -31,7 +34,7 @@ struct PersonListView: View {
         }.alert(isPresented: $viewModel.isAlerting) {
             Alert(
                 title: Text(viewModel.error?.localizedDescription ?? "retry"),
-                dismissButton: .default(Text("retry")) {
+                dismissButton: .cancel(Text("retry")) {
                     viewModel.retry()
                 }
             )

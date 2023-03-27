@@ -25,6 +25,11 @@
 		8B648B8529CC81E3002200A2 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B8429CC81E3002200A2 /* Data.swift */; };
 		8B648B8729CC821D002200A2 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B8629CC821D002200A2 /* String.swift */; };
 		8B648B8929CC849F002200A2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B8829CC849F002200A2 /* UserService.swift */; };
+		8B82696129D21089002ABDD5 /* CoordinatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82696029D21089002ABDD5 /* CoordinatorApp.swift */; };
+		8B82696529D210EC002ABDD5 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 8B82696429D210EC002ABDD5 /* SwiftUINavigation */; };
+		8B82696729D21147002ABDD5 /* CoordinatorAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82696629D21147002ABDD5 /* CoordinatorAppViewModel.swift */; };
+		8B82696B29D21173002ABDD5 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82696A29D21173002ABDD5 /* DetailCoordinator.swift */; };
+		8B82696D29D21181002ABDD5 /* DetailCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82696C29D21181002ABDD5 /* DetailCoordinatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,10 @@
 		8B648B8629CC821D002200A2 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8B648B8829CC849F002200A2 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		8B82695E29CE280E002ABDD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8B82696029D21089002ABDD5 /* CoordinatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorApp.swift; sourceTree = "<group>"; };
+		8B82696629D21147002ABDD5 /* CoordinatorAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAppViewModel.swift; sourceTree = "<group>"; };
+		8B82696A29D21173002ABDD5 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		8B82696C29D21181002ABDD5 /* DetailCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B82696529D210EC002ABDD5 /* SwiftUINavigation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +111,7 @@
 				8B648B4829CC73F2002200A2 /* TestIOSTests */,
 				8B648B5229CC73F3002200A2 /* TestIOSUITests */,
 				8B648B3629CC73F0002200A2 /* Products */,
+				8B82696329D210EC002ABDD5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +128,7 @@
 		8B648B3729CC73F0002200A2 /* TestIOS */ = {
 			isa = PBXGroup;
 			children = (
+				8B82695F29D2106F002ABDD5 /* Coordinator */,
 				8B82695E29CE280E002ABDD5 /* Info.plist */,
 				8B648B8329CC81BC002200A2 /* Extension */,
 				8B648B7329CC77BB002200A2 /* API */,
@@ -226,6 +238,40 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		8B82695F29D2106F002ABDD5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8B82696929D21159002ABDD5 /* DetailCoordinator */,
+				8B82696829D2114C002ABDD5 /* AppCoordinator */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8B82696329D210EC002ABDD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B82696829D2114C002ABDD5 /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8B82696029D21089002ABDD5 /* CoordinatorApp.swift */,
+				8B82696629D21147002ABDD5 /* CoordinatorAppViewModel.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		8B82696929D21159002ABDD5 /* DetailCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8B82696A29D21173002ABDD5 /* DetailCoordinator.swift */,
+				8B82696C29D21181002ABDD5 /* DetailCoordinatorView.swift */,
+			);
+			path = DetailCoordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,6 +288,9 @@
 			dependencies = (
 			);
 			name = TestIOS;
+			packageProductDependencies = (
+				8B82696429D210EC002ABDD5 /* SwiftUINavigation */,
+			);
 			productName = TestIOS;
 			productReference = 8B648B3529CC73F0002200A2 /* TestIOS.app */;
 			productType = "com.apple.product-type.application";
@@ -314,6 +363,9 @@
 				Base,
 			);
 			mainGroup = 8B648B2C29CC73F0002200A2;
+			packageReferences = (
+				8B82696229D210C4002ABDD5 /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
+			);
 			productRefGroup = 8B648B3629CC73F0002200A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -359,10 +411,14 @@
 				8B648B7929CC7A29002200A2 /* Header.swift in Sources */,
 				8B648B6D29CC7554002200A2 /* PersonDetailViewModel.swift in Sources */,
 				8B648B6729CC751C002200A2 /* PersonListView.swift in Sources */,
+				8B82696729D21147002ABDD5 /* CoordinatorAppViewModel.swift in Sources */,
 				8B648B6B29CC7546002200A2 /* PersonDetailView.swift in Sources */,
 				8B648B8029CC7DC9002200A2 /* UserDetails.swift in Sources */,
 				8B648B3929CC73F0002200A2 /* TestIOSApp.swift in Sources */,
+				8B82696D29D21181002ABDD5 /* DetailCoordinatorView.swift in Sources */,
+				8B82696129D21089002ABDD5 /* CoordinatorApp.swift in Sources */,
 				8B648B6929CC752E002200A2 /* PersonListViewModel.swift in Sources */,
+				8B82696B29D21173002ABDD5 /* DetailCoordinator.swift in Sources */,
 				8B648B8529CC81E3002200A2 /* Data.swift in Sources */,
 				8B648B7629CC784C002200A2 /* NetworkRequestExecutor.swift in Sources */,
 				8B648B8229CC7DD5002200A2 /* UserList.swift in Sources */,
@@ -695,6 +751,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B82696229D210C4002ABDD5 /* XCRemoteSwiftPackageReference "swiftui-navigation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swiftui-navigation";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B82696429D210EC002ABDD5 /* SwiftUINavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B82696229D210C4002ABDD5 /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			productName = SwiftUINavigation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8B648B2D29CC73F0002200A2 /* Project object */;
 }
