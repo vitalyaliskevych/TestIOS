@@ -9,24 +9,22 @@ import Foundation
 import SwiftUI
 
 class DetailCoordinator: ObservableObject {
-
+    
     enum Result {
         case navigationBack
     }
     
     var onResult: ((Result) -> Void)?
-    var viewModel: PersonListViewModel
+    var viewModel: PersonDetailViewModel
     var user: UserDetails
     
-    init(viewModel: PersonListViewModel, user: UserDetails) {
+    init(viewModel: PersonDetailViewModel, user: UserDetails) {
         self.viewModel = viewModel
         self.user = user
         viewModel.onResult = { [weak self] result in
             switch result {
             case .navigationBack:
                 self?.onResult?(.navigationBack)
-            case .navigationDetail(user: let user):
-                self?.onResult = nil
             }
         }
     }

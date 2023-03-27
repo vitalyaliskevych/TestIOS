@@ -10,31 +10,22 @@ import Combine
 
 class PersonDetailViewModel: ObservableObject {
     
-    private let networkRequestExecutor: NetworkRequestExecutor
-    
-    @Published var userDetails: UserDetails?
+    var userService: UserService
     @Published var error: Error?
+    @Published var userDetails = [UserDetails]()
     private var cancellable: AnyCancellable?
     
-    init(networkRequestExecutor: NetworkRequestExecutor) {
-        self.networkRequestExecutor = networkRequestExecutor
+    init(userService: UserService) {
+        self.userService = userService
     }
     
     enum Result {
-         case navigationBackToList
-         case navigationBack
-     }
-
-     var onResult: ((Result) -> Void)?
-     
-     func navigationBack() {
-         onResult?(.navigationBackToList)
-     }
-     
-     func navigationBackTO() {
-         onResult?(.navigationBackToList)
-     }
-     
+        case navigationBack
+    }
+    
+    var onResult: ((Result) -> Void)?
+    
+    func navigationBack() {
+        onResult?(.navigationBack)
+    }
 }
-
-

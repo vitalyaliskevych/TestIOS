@@ -30,7 +30,7 @@ class CoordinatorApp: ObservableObject {
     }
     
     func getInfo(user: UserDetails) {
-        let coordinator = DetailCoordinator(viewModel: PersonListViewModel(userService: UserService()), user: user)
+        let coordinator = DetailCoordinator(viewModel: PersonDetailViewModel(userService: UserService()), user: user)
         coordinator.onResult = {[weak self] result in
             switch result {
             case .navigationBack:

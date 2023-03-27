@@ -11,7 +11,7 @@ import SwiftUINavigation
 struct CoordatatorAppView: View {
     
     @ObservedObject var coordinator: CoordinatorApp
-
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -20,9 +20,9 @@ struct CoordatatorAppView: View {
                     unwrapping: $coordinator.route,
                     case: /CoordinatorApp.Route.navigationDetail,
                     destination: {(coordinator: Binding<DetailCoordinator>) in
-                    DetailCoordinatorView(
-                        coordinator: coordinator.wrappedValue).navigationBarBackButtonHidden(true)
-                }, onNavigate: {_ in}) {}
+                        DetailCoordinatorView(
+                            coordinator: coordinator.wrappedValue).navigationBarBackButtonHidden(true)
+                    }, onNavigate: {_ in}) {}
             }
         }
     }

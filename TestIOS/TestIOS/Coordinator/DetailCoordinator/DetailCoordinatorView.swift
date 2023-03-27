@@ -15,7 +15,8 @@ struct DetailCoordinatorView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                PersonListView(viewModel: PersonListViewModel(userService: UserService()))
+                PersonDetailView(viewModel: coordinator.viewModel,
+                                 userDetails: coordinator.user)
             }
         }
     }

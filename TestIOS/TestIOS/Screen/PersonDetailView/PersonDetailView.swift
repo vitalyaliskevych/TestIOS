@@ -10,7 +10,7 @@ import SwiftUI
 struct PersonDetailView: View {
     
     @ObservedObject var viewModel: PersonDetailViewModel
-    let userDetails: UserDetails
+    var userDetails: UserDetails
     
     var body: some View {
         ZStack {
@@ -22,11 +22,11 @@ struct PersonDetailView: View {
                 Text(userDetails.country)
                 Spacer()
                 Button {
-                    viewModel.navigationBackTO()
+                    viewModel.navigationBack()
                 } label: {
-                Text("Back")
+                    Text("Back")
                 }
-
+                
             }
             .foregroundColor(.red)
             .font(.system(size: 25))
