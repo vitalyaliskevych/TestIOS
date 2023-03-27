@@ -12,6 +12,7 @@ struct PersonDetailView: View {
     let userDetails: UserDetails
     
     var body: some View {
+        ZStack {
             VStack {
                 Text(userDetails.firstName)
                 Text(userDetails.lastName)
@@ -22,5 +23,6 @@ struct PersonDetailView: View {
             }
             .foregroundColor(.red)
             .font(.system(size: 25))
+        }
     }
 }

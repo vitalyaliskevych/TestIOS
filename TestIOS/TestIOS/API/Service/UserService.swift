@@ -54,7 +54,7 @@ class UserService {
         }
     }
     
-     func fetchPersonDetails(withId id: String) -> AnyPublisher <UserDetails, Error> {
+    func fetchPersonDetails(withId id: String) -> AnyPublisher <UserDetails, Error> {
         let url = URL(string: "http://opn-interview-service.nn.r.appspot.com/get/\(id)")!
         let request = networkRequestExecutor.createRequest(for: url)
         

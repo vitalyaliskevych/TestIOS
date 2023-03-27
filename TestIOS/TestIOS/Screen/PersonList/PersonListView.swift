@@ -12,7 +12,7 @@ struct PersonListView: View {
     @ObservedObject var viewModel: PersonListViewModel
     
     var body: some View {
-        Group {
+        NavigationView {
             if viewModel.isError {
                 List {
                     ForEach(viewModel.userDetails, id: \.self) { userDetails in

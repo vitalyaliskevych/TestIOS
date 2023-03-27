@@ -19,7 +19,6 @@ class PersonDetailViewModel: ObservableObject {
     init(networkRequestExecutor: NetworkRequestExecutor) {
         self.networkRequestExecutor = networkRequestExecutor
     }
-    
 }
 
 

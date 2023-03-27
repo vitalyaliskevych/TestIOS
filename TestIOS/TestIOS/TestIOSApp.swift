@@ -11,8 +11,12 @@ import SwiftUI
 struct TestIOSApp: App {
     var body: some Scene {
         WindowGroup {
-           PersonListView(viewModel: PersonListViewModel(userService: UserService())
-           )
+            PersonListView(viewModel:
+                            PersonListViewModel(
+                                userService:
+                                    UserService()
+                            )
+            )
         }
     }
 }
