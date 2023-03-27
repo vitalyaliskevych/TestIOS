@@ -25,7 +25,6 @@
 		8B648B8529CC81E3002200A2 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B8429CC81E3002200A2 /* Data.swift */; };
 		8B648B8729CC821D002200A2 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B8629CC821D002200A2 /* String.swift */; };
 		8B648B8929CC849F002200A2 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B8829CC849F002200A2 /* UserService.swift */; };
-		8B648B8B29CC9006002200A2 /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B8A29CC9006002200A2 /* DetailService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +66,6 @@
 		8B648B8429CC81E3002200A2 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		8B648B8629CC821D002200A2 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8B648B8829CC849F002200A2 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		8B648B8A29CC9006002200A2 /* DetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailService.swift; sourceTree = "<group>"; };
 		8B82695E29CE280E002ABDD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				8B648B8829CC849F002200A2 /* UserService.swift */,
-				8B648B8A29CC9006002200A2 /* DetailService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -360,7 +357,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B648B7929CC7A29002200A2 /* Header.swift in Sources */,
-				8B648B8B29CC9006002200A2 /* DetailService.swift in Sources */,
 				8B648B6D29CC7554002200A2 /* PersonDetailViewModel.swift in Sources */,
 				8B648B6729CC751C002200A2 /* PersonListView.swift in Sources */,
 				8B648B6B29CC7546002200A2 /* PersonDetailView.swift in Sources */,

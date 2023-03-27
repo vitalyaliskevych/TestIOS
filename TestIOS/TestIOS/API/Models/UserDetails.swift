@@ -12,7 +12,7 @@ struct UserDetailsResponse: Codable {
     let data: UserDetails
 }
 
-struct UserDetails: Codable, Identifiable, Equatable {
+struct UserDetails: Codable, Identifiable, Equatable, Hashable {
     let id: String
     let firstName: String
     let lastName: String

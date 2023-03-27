@@ -7,16 +7,128 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A5835570-419C-4533-9B56-7DB90AEB2A7D"
+            uuid = "E923DDBE-577D-4411-B430-84EB801B49C4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestIOS/Screen/PersonList/PersonListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "fetchPeople()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA2D4C2F-B10F-46E5-9A07-2EC5387407BC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestIOS/API/Service/UserService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "fetchUserDetails(userIds:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "fetchUserDetails(userIds:completions:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CA2D4C2F-B10F-46E5-9A07-2EC5387407BC - 8f3198350920acab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in TestIOS.UserService.fetchUserDetails(userIds: Swift.Array&lt;Swift.String&gt;, completions: (Combine.AnyPublisher&lt;Swift.Array&lt;TestIOS.UserDetails&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TestIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/developer/Documents/GitHub/TestIOS/TestIOS/TestIOS/API/Service/UserService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "123">
+               </Location>
+               <Location
+                  uuid = "CA2D4C2F-B10F-46E5-9A07-2EC5387407BC - 8f3198350920acab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in TestIOS.UserService.fetchUserDetails(userIds: Swift.Array&lt;Swift.String&gt;, completions: (Combine.AnyPublisher&lt;Swift.Array&lt;TestIOS.UserDetails&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TestIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/developer/Documents/GitHub/TestIOS/TestIOS/TestIOS/API/Service/UserService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50FFD2CE-3A95-4CF2-BD15-BF626446CA51"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestIOS/API/Service/UserService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "fetchUserDetails(userIds:completions:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "50FFD2CE-3A95-4CF2-BD15-BF626446CA51 - 8f3198350920ad2f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in TestIOS.UserService.fetchUserDetails(userIds: Swift.Array&lt;Swift.String&gt;, completions: (Combine.AnyPublisher&lt;Swift.Array&lt;TestIOS.UserDetails&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TestIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/developer/Documents/GitHub/TestIOS/TestIOS/TestIOS/API/Service/UserService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "235">
+               </Location>
+               <Location
+                  uuid = "50FFD2CE-3A95-4CF2-BD15-BF626446CA51 - f791a630014bdab3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (TestIOS.UserDetails) -&gt; () in TestIOS.UserService.fetchUserDetails(userIds: Swift.Array&lt;Swift.String&gt;, completions: (Combine.AnyPublisher&lt;Swift.Array&lt;TestIOS.UserDetails&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TestIOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/developer/Documents/GitHub/TestIOS/TestIOS/TestIOS/API/Service/UserService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4822451-AC65-4D02-A1A1-1561BC63B4CA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestIOS/API/Service/UserService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "fetchUserDetails(userIds:completions:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

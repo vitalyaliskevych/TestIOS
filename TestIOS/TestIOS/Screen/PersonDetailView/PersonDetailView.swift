@@ -12,12 +12,15 @@ struct PersonDetailView: View {
     let userDetails: UserDetails
     
     var body: some View {
-        VStack {
-            Text(userDetails.firstName)
-            Text(userDetails.lastName)
-            Text("\(userDetails.age)")
-            Text(userDetails.gender)
-            Text(userDetails.country)
-        }
+            VStack {
+                Text(userDetails.firstName)
+                Text(userDetails.lastName)
+                Text("\(userDetails.age)")
+                Text(userDetails.gender)
+                Text(userDetails.country)
+                Spacer()
+            }
+            .foregroundColor(.red)
+            .font(.system(size: 25))
     }
 }
