@@ -11,7 +11,7 @@ import SwiftUI
 struct TestIOSApp: App {
     var body: some Scene {
         WindowGroup {
-          CoordatatorAppView(coordinator: CoordinatorApp(viewModel: PersonListViewModel(userService: UserService())))
+            CoordatatorAppView(coordinator: CoordinatorApp(viewModel: PersonListViewModel(userService: UserService())))
         }
     }
 }

@@ -21,7 +21,7 @@ struct PersonListView: View {
                         } label: {
                             Text(userDetails.firstName)
                         }
-
+                        
                     }.navigationTitle("People")
                 }
             } else {
@@ -31,6 +31,7 @@ struct PersonListView: View {
             }
         }.onAppear {
             viewModel.fetchPeople()
+            viewModel.userDetails.removeAll()
         }.alert(isPresented: $viewModel.isAlerting) {
             Alert(
                 title: Text(viewModel.error?.localizedDescription ?? "retry"),

@@ -71,7 +71,7 @@
 		8B648B8429CC81E3002200A2 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		8B648B8629CC821D002200A2 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8B648B8829CC849F002200A2 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		8B82695E29CE280E002ABDD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8B82695E29CE280E002ABDD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B82696029D21089002ABDD5 /* CoordinatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorApp.swift; sourceTree = "<group>"; };
 		8B82696629D21147002ABDD5 /* CoordinatorAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAppView.swift; sourceTree = "<group>"; };
 		8B82696A29D21173002ABDD5 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
@@ -107,6 +107,7 @@
 		8B648B2C29CC73F0002200A2 = {
 			isa = PBXGroup;
 			children = (
+				8B82695E29CE280E002ABDD5 /* Info.plist */,
 				8B648B3729CC73F0002200A2 /* TestIOS */,
 				8B648B4829CC73F2002200A2 /* TestIOSTests */,
 				8B648B5229CC73F3002200A2 /* TestIOSUITests */,
@@ -129,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				8B82695F29D2106F002ABDD5 /* Coordinator */,
-				8B82695E29CE280E002ABDD5 /* Info.plist */,
 				8B648B8329CC81BC002200A2 /* Extension */,
 				8B648B7329CC77BB002200A2 /* API */,
 				8B648B6229CC7460002200A2 /* Screen */,

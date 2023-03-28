@@ -26,7 +26,6 @@ struct PersonDetailView: View {
                 } label: {
                     Text("Back")
                 }
-                
             }
             .foregroundColor(.red)
             .font(.system(size: 25))

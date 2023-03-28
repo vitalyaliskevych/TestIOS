@@ -24,6 +24,7 @@ class CoordinatorApp: ObservableObject {
             case .navigationDetail(let user):
                 self?.getInfo(user: user)
             case .navigationBack:
+                self?.viewModel.userDetails.removeAll()
                 self?.route = nil
             }
         }
