@@ -9,7 +9,12 @@ import Foundation
 import Combine
 import CryptoKit
 
-class UserService {
+protocol UserServise {
+    func fetchPeople() -> AnyPublisher<UsersList, Error>
+    func fetchPersonDetails(withId id: String) -> AnyPublisher <UserDetails, Error>
+}
+
+class UserServiceImpl: UserServise {
     
     let networkRequestExecutor = NetworkRequestExecutor()
     private var cancellable: Set<AnyCancellable> = []

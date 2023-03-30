@@ -10,7 +10,7 @@ import Combine
 import Network
 
 class PersonListViewModel: ObservableObject {
-    private var userService: UserService
+    private let userService: UserServise
     
     @Published var userDetails = [UserDetails]()
     @Published var error: Error?
@@ -19,11 +19,11 @@ class PersonListViewModel: ObservableObject {
     
     private var cancellable: Set<AnyCancellable> = []
     
-    init(userService: UserService) {
+    init(userService: UserServise) {
         self.userService = userService
     }
     
-    enum Result {
+    enum Result: Equatable {
         case navigationDetail(user: UserDetails)
         case navigationBack
     }

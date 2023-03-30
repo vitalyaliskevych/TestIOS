@@ -10,7 +10,6 @@
 		8B648B3929CC73F0002200A2 /* TestIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B3829CC73F0002200A2 /* TestIOSApp.swift */; };
 		8B648B3D29CC73F2002200A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B648B3C29CC73F2002200A2 /* Assets.xcassets */; };
 		8B648B4029CC73F2002200A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B648B3F29CC73F2002200A2 /* Preview Assets.xcassets */; };
-		8B648B4A29CC73F2002200A2 /* TestIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B4929CC73F2002200A2 /* TestIOSTests.swift */; };
 		8B648B5429CC73F3002200A2 /* TestIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B5329CC73F3002200A2 /* TestIOSUITests.swift */; };
 		8B648B5629CC73F3002200A2 /* TestIOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B5529CC73F3002200A2 /* TestIOSUITestsLaunchTests.swift */; };
 		8B648B6729CC751C002200A2 /* PersonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B648B6629CC751C002200A2 /* PersonListView.swift */; };
@@ -30,6 +29,10 @@
 		8B82696729D21147002ABDD5 /* CoordinatorAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82696629D21147002ABDD5 /* CoordinatorAppView.swift */; };
 		8B82696B29D21173002ABDD5 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82696A29D21173002ABDD5 /* DetailCoordinator.swift */; };
 		8B82696D29D21181002ABDD5 /* DetailCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82696C29D21181002ABDD5 /* DetailCoordinatorView.swift */; };
+		8BA30BBE29D4698800259152 /* UserServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA30BBD29D4698800259152 /* UserServiceMock.swift */; };
+		8BA30BC429D46D0200259152 /* PersonListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA30BC329D46D0200259152 /* PersonListViewModelTest.swift */; };
+		8BA30BC629D46D3F00259152 /* PersonDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA30BC529D46D3F00259152 /* PersonDetailViewModelTest.swift */; };
+		8BA30BC829D4773000259152 /* CoordinatorAppTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA30BC729D4773000259152 /* CoordinatorAppTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +58,6 @@
 		8B648B3C29CC73F2002200A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B648B3F29CC73F2002200A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8B648B4529CC73F2002200A2 /* TestIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B648B4929CC73F2002200A2 /* TestIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIOSTests.swift; sourceTree = "<group>"; };
 		8B648B4F29CC73F3002200A2 /* TestIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B648B5329CC73F3002200A2 /* TestIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIOSUITests.swift; sourceTree = "<group>"; };
 		8B648B5529CC73F3002200A2 /* TestIOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -76,6 +78,10 @@
 		8B82696629D21147002ABDD5 /* CoordinatorAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAppView.swift; sourceTree = "<group>"; };
 		8B82696A29D21173002ABDD5 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
 		8B82696C29D21181002ABDD5 /* DetailCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinatorView.swift; sourceTree = "<group>"; };
+		8BA30BBD29D4698800259152 /* UserServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceMock.swift; sourceTree = "<group>"; };
+		8BA30BC329D46D0200259152 /* PersonListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewModelTest.swift; sourceTree = "<group>"; };
+		8BA30BC529D46D3F00259152 /* PersonDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModelTest.swift; sourceTree = "<group>"; };
+		8BA30BC729D4773000259152 /* CoordinatorAppTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAppTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +157,9 @@
 		8B648B4829CC73F2002200A2 /* TestIOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				8B648B4929CC73F2002200A2 /* TestIOSTests.swift */,
+				8BA30BC129D46CA200259152 /* Coordinator */,
+				8BA30BC229D46CCD00259152 /* Api */,
+				8BA30BC029D46C8800259152 /* Screens */,
 			);
 			path = TestIOSTests;
 			sourceTree = "<group>";
@@ -270,6 +278,39 @@
 				8B82696C29D21181002ABDD5 /* DetailCoordinatorView.swift */,
 			);
 			path = DetailCoordinator;
+			sourceTree = "<group>";
+		};
+		8BA30BBF29D46C7C00259152 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8BA30BBD29D4698800259152 /* UserServiceMock.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8BA30BC029D46C8800259152 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8BA30BC329D46D0200259152 /* PersonListViewModelTest.swift */,
+				8BA30BC529D46D3F00259152 /* PersonDetailViewModelTest.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8BA30BC129D46CA200259152 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8BA30BC729D4773000259152 /* CoordinatorAppTest.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8BA30BC229D46CCD00259152 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				8BA30BBF29D46C7C00259152 /* Service */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,7 +473,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B648B4A29CC73F2002200A2 /* TestIOSTests.swift in Sources */,
+				8BA30BC829D4773000259152 /* CoordinatorAppTest.swift in Sources */,
+				8BA30BC629D46D3F00259152 /* PersonDetailViewModelTest.swift in Sources */,
+				8BA30BC429D46D0200259152 /* PersonListViewModelTest.swift in Sources */,
+				8BA30BBE29D4698800259152 /* UserServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

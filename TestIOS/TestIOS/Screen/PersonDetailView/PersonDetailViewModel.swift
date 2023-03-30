@@ -10,16 +10,16 @@ import Combine
 
 class PersonDetailViewModel: ObservableObject {
     
-    var userService: UserService
+    private let userService: UserServise
     @Published var error: Error?
     @Published var userDetails = [UserDetails]()
     private var cancellable: AnyCancellable?
     
-    init(userService: UserService) {
+    init(userService: UserServise) {
         self.userService = userService
     }
     
-    enum Result {
+    enum Result: Equatable {
         case navigationBack
     }
     
