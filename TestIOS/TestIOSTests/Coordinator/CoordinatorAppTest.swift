@@ -10,11 +10,11 @@ import XCTest
 
 class CoordinatorAppTest: XCTestCase {
     
-    func getInfoTest() {
+    func testGetInfo() {
         let user = UserDetails(id: "1", firstName: "Jon", lastName: "Smith", age: 17, gender: "male", country: "Canada")
         let sut = CoordinatorApp(viewModel: PersonListViewModel(userService: UserServiceImpl()))
         
         sut.viewModel.onResult?(.navigationDetail(user: user))
-        XCTAssertNil(sut.route)
+        XCTAssertNotNil(sut.route)
     }
 }
